@@ -1,0 +1,43 @@
+-- import: fifthtry.github.io/roboto-font/assets
+
+-- ftd.type dtype:
+size.px: 40
+weight: 900
+font-family: $assets.fonts.Roboto
+line-height.px: 65
+letter-spacing.px: 5
+
+-- component heading:
+
+-- ftd.text: Button Components
+role: $inherited.types.heading-large
+align-self: center
+margin.px: 30
+-- end: heading
+
+-- boolean $show: false
+
+-- component button:
+;; boolean $current: false
+caption title:
+
+-- ftd.text: $button.title
+align-self: center
+padding.px: 10
+border-radius.px: 5
+background.solid: #2DD4BF
+color: white
+border-width.px: 2
+;; $on-click$: $ftd.toggle($a = $button.current)
+$on-click$: $ftd.toggle($a = $show)
+-- end: button
+
+-- heading:
+
+-- button: Extra Large Button
+
+-- ftd.text: Hi, there
+if: { show }
+align-self: center
+margin.px: 20
+
